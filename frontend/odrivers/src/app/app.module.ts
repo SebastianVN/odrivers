@@ -1,3 +1,11 @@
+import { ForoPage } from './../pages/foro/foro';
+import { HistorialPage } from './../pages/historial/historial';
+import { LoginPage } from './../pages/login/login';
+import { PuntosAtencionPage } from './../pages/puntos-atencion/puntos-atencion';
+import { ReportesPage } from './../pages/reportes/reportes';
+import { RutasAtencionPage } from './../pages/rutas-atencion/rutas-atencion';
+import { ServicioPage } from './../pages/servicio/servicio';
+import { RegisterPage } from './../pages/register/register';
 import { UbicacionPage } from './../pages/ubicacion/ubicacion';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -7,14 +15,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-<<<<<<< HEAD
 import { InicioPage } from './../pages/inicio/inicio';
 
 import { Geolocation } from '@ionic-native/geolocation';
 import { PerfilPage } from '../pages/perfil/perfil';
-=======
-import { RestProvider } from '../providers/rest/rest';
->>>>>>> 9efd2590d1a50c71ddaa36816d36017498023827
 
 @NgModule({
   declarations: [
@@ -23,6 +27,14 @@ import { RestProvider } from '../providers/rest/rest';
     InicioPage,
     UbicacionPage,
     PerfilPage,
+    RegisterPage,
+    ServicioPage,
+    RutasAtencionPage,
+    ReportesPage,
+    PuntosAtencionPage,
+    LoginPage,
+    HistorialPage,
+    ForoPage,
   ],
   imports: [
     BrowserModule,
@@ -35,16 +47,20 @@ import { RestProvider } from '../providers/rest/rest';
     InicioPage,
     UbicacionPage,
     PerfilPage,
+    RegisterPage,
+    ServicioPage,
+    RutasAtencionPage,
+    ReportesPage,
+    PuntosAtencionPage,
+    LoginPage,
+    HistorialPage,
+    ForoPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-<<<<<<< HEAD
     Geolocation,
-=======
-    RestProvider
->>>>>>> 9efd2590d1a50c71ddaa36816d36017498023827
   ]
 })
 export class AppModule {}

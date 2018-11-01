@@ -14,5 +14,29 @@
 
 
 <ion-content padding>
+    <ion-grid>
+        <ion-row>
+          <ion-col>
+          </ion-col>
+          <ion-col col-3>
+              <h1>Iniciar sesión</h1>
+          </ion-col>
+          <ion-col>
+          </ion-col>
+        </ion-row>
+        
+      </ion-grid>
+  
+  <ion-item>
+    <ion-label fixed>Username</ion-label>
+    <ion-input type="text" value=""></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed>Password</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
+  <button ion-button outline>Iniciar sesión</button>
+  <button ion-button round (click)='irRegister()'>Crear cuenta</button>
 
 </ion-content>

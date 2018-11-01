@@ -1,3 +1,4 @@
+import { LoginPage } from './../login/login';
 import { UbicacionPage } from './../ubicacion/ubicacion';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
@@ -18,5 +19,9 @@ export class HomePage {
 
   irUbicacion(){
     this.navCtrl.push(UbicacionPage);
+  }
+  
+  irLogin(){
+    this.navCtrl.push(LoginPage);
   }
 }
