@@ -1,3 +1,4 @@
+import { TabsPage } from './../pages/tabs/tabs';
 import { ForoPage } from './../pages/foro/foro';
 import { HistorialPage } from './../pages/historial/historial';
 import { LoginPage } from './../pages/login/login';
@@ -35,6 +36,7 @@ import { PerfilPage } from '../pages/perfil/perfil';
     LoginPage,
     HistorialPage,
     ForoPage,
+    TabsPage,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +57,7 @@ import { PerfilPage } from '../pages/perfil/perfil';
     LoginPage,
     HistorialPage,
     ForoPage,
+    TabsPage,
   ],
   providers: [
     StatusBar,
