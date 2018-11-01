@@ -13,4 +13,11 @@ urlpatterns = [
 
     url(r'^servicio/$', views.ServicioList.as_view()),
     url(r'^servicio/(?P<pk>[0-9]+)/$', views.ServicioDetail.as_view()),
+
+    url(r'^itinerario/$', views.ItinerarioList.as_view()),
+    url(r'^itinerario/(?P<pk>[0-9]+)/$', views.ItinerarioDetail.as_view()),
+
+    url(r'^puntoatencion/$', views.PuntoAtencionList.as_view()),
+    url(r'^puntoatencion/(?P<pk>[0-9]+)/$', views.PuntoAtencionDetail.as_view()),
+
 ]
