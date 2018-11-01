@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { UbicacionPage } from '../ubicacion/ubicacion';
 import { PerfilPage } from '../perfil/perfil';
+import { LoginPage } from '../login/login';
 
 /**
  * Generated class for the InicioPage page.
@@ -30,6 +31,10 @@ export class InicioPage {
 
   irPerfil(){
     this.navCtrl.push(PerfilPage);
+  }
+  cerrarSesion() {
+    localStorage.clear();
+    this.navCtrl.setRoot(LoginPage);
   }
 
 }

@@ -28,15 +28,15 @@
       </ion-grid>
   
   <ion-item>
-    <ion-label fixed>Username</ion-label>
-    <ion-input type="text" value=""></ion-input>
+    <ion-label fixed>Usuario</ion-label>
+    <ion-input type="text" [(ngModel)]="usuario"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label fixed>Password</ion-label>
-    <ion-input type="password"></ion-input>
+    <ion-label fixed>Contraseña</ion-label>
+    <ion-input type="password" [(ngModel)]="contrasena"></ion-input>
   </ion-item>
-  <button ion-button outline>Iniciar sesión</button>
-  <button ion-button round (click)='irRegister()'>Crear cuenta</button>
+  <button ion-button outline (click)="hacerLogin()">Iniciar sesión</button>
+  <button ion-button round (click)="irRegister()">Crear cuenta</button>
 
 </ion-content>

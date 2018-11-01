@@ -18,7 +18,9 @@ import { HomePage } from '../pages/home/home';
 import { InicioPage } from './../pages/inicio/inicio';
 
 import { Geolocation } from '@ionic-native/geolocation';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { PerfilPage } from '../pages/perfil/perfil';
+import { RestProvider } from '../providers/rest/rest';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { PerfilPage } from '../pages/perfil/perfil';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -60,6 +63,8 @@ import { PerfilPage } from '../pages/perfil/perfil';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    HttpClient,
+    RestProvider,
     Geolocation,
   ]
 })

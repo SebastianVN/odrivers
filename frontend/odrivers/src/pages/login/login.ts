@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
+import { InicioPage } from '../inicio/inicio';
+import { RestProvider } from '../../providers/rest/rest';
 
 /**
  * Generated class for the LoginPage page.
@@ -15,16 +17,26 @@ import { RegisterPage } from '../register/register';
   templateUrl: 'login.html',
 })
 export class LoginPage {
+  usuario: String;
+  contrasena: String;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+    if(window.localStorage['token']){
+      this.navCtrl.setRoot(InicioPage);
+      console.log("se esta pasando de lanzazaazaza");
+    }
   }
 
-  irRegister(){
-    this.navCtrl.push(RegisterPage);
+  hacerLogin(){
+    var data = { 'username': this.usuario, 'password': this.contrasena };
+    this.restProvider.login(data)
+      .then((data:any)=> {
+        window.localStorage['token'] = data.key;
+        this.navCtrl.setRoot(InicioPage);
+      });
   }
 
 }

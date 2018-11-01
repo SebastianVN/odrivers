@@ -16,7 +16,7 @@ export class RestProvider {
   apiItinerario = 'itinerario/';
   apiServicio = 'servicio/';
   apiHistorial = 'historialmedico/';
-  apiPunto = 'puntoatencion /';
+  apiPunto = 'puntoatencion/';
   constructor(public http: HttpClient) {
     console.log('Hello RestProvider Provider');
   }
