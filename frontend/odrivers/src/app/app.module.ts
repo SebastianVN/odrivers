@@ -1,3 +1,4 @@
+import { TabsPage } from './../pages/tabs/tabs';
 import { ForoPage } from './../pages/foro/foro';
 import { HistorialPage } from './../pages/historial/historial';
 import { LoginPage } from './../pages/login/login';
@@ -37,6 +38,7 @@ import { RestProvider } from '../providers/rest/rest';
     LoginPage,
     HistorialPage,
     ForoPage,
+    TabsPage,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +60,7 @@ import { RestProvider } from '../providers/rest/rest';
     LoginPage,
     HistorialPage,
     ForoPage,
+    TabsPage,
   ],
   providers: [
     StatusBar,
