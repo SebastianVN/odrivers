@@ -39,11 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    'corsheaders',
     'rest_auth',
     'Odrivers',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -82,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'odrivers',
         'USER': 'root',
-        'PASSWORD': 'password',
+        'PASSWORD': 'Artemisa2017',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -135,3 +137,17 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ),
 }
+CORS_ORIGIN_WHITELIST = (
+ 'localhost:8080',
+ 'localhost:8000',
+ 'localhost:8100',
+ 'localhost:8200',
+)
+ 
+CORS_ALLOW_METHODS = (     
+    'DELETE',     
+    'GET',     
+    'PATCH',     
+    'POST',     
+    'PUT', 
+)

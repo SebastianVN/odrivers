@@ -7,10 +7,14 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+<<<<<<< HEAD
 import { InicioPage } from './../pages/inicio/inicio';
 
 import { Geolocation } from '@ionic-native/geolocation';
 import { PerfilPage } from '../pages/perfil/perfil';
+=======
+import { RestProvider } from '../providers/rest/rest';
+>>>>>>> 9efd2590d1a50c71ddaa36816d36017498023827
 
 @NgModule({
   declarations: [
@@ -36,7 +40,11 @@ import { PerfilPage } from '../pages/perfil/perfil';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+<<<<<<< HEAD
     Geolocation,
+=======
+    RestProvider
+>>>>>>> 9efd2590d1a50c71ddaa36816d36017498023827
   ]
 })
 export class AppModule {}
